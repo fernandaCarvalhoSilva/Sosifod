@@ -1,0 +1,38 @@
+/* login */
+#login .form-control {
+    margin: 10px 0; 
+}
+
+.errorEmail {
+  color: #FF2401;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+.bg-imagem {
+    width: 540px;
+    border-radius: 8px 0 0 8px;
+}
+
+.text-sidebar {
+    font-size: 12px;
+    padding: 0 10px;
+    font-weight: 500;
+}
+
+.bg-gradient-primary {
+   background-image: linear-gradient(180deg, #002e66 10%, #002e66 100%);
+}
+
+.btn-primary {
+    color: #002e66 !important;
+    background-color: #002e66;
+    border-color: #002e66;
+}
+
+.logout {
+    padding: 0 30px !important;
+    color: #002e66 !important;
+    text-decoration: underline !important;
+}
+
