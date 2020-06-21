@@ -9,13 +9,15 @@
   padding: 10px 0;
 }
 
+/*Cadastro*/
 .bg-imagem {
     width: 540px;
     border-radius: 8px 0 0 8px;
 }
 
+/*Home*/
 .text-sidebar {
-    font-size: 12px;
+    font-size: 12px !important;
     padding: 0 10px;
     font-weight: 500;
 }
@@ -25,9 +27,10 @@
 }
 
 .btn-primary {
-    color: #002e66 !important;
+    color: #ffffff !important;
     background-color: #002e66;
     border-color: #002e66;
+    font-size: 14px;
 }
 
 .logout {
@@ -36,3 +39,11 @@
     text-decoration: underline !important;
 }
 
+/*Editar Intimição*/ 
+#justificativa {
+    margin: 0 5px;
+}
+
+#btn-salvar {
+    padding: 0 4px;
+}

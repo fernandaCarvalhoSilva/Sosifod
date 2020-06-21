@@ -25,7 +25,7 @@
         <!-- Custom styles for this template -->
         <link href="../css/coming-soon.css" rel="stylesheet"/>
         <link href="../css/sb-admin-2.css" rel="stylesheet"/>
-        
+       
         <!-- -->
         <link href="../css/styles.css" rel="stylesheet" type="text/css"/>    
     </h:head>
@@ -103,36 +103,45 @@
 
                     </nav>
                     <!-- End of Topbar -->
-
-                    <!-- Begin Page Content -->
+                    
+                     <!-- Begin Page Content -->
                     <div class="container-fluid">
 
-                        <!-- Page Heading -->
                         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1 class="h3 mb-0 text-gray-800">Intimações</h1>
+                            <h1 class="h3 mb-0 text-gray-800">Editar Intimação</h1>
                         </div>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Titulo</th>
-                                    <th scope="col">Data de abertura</th>
-                                    <th scope="col">Ação</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Intimação para comparecimento em audiência</td>
-                                    <td>03/05/2020</td>
-                                    <td>
-                                        <a href="visualizar_intimacao.html" class='btn btn-sm btn-primary'><i class='fas fa-eye'></i></a>
-                                        <a href="editar_intimacao.html" class='btn btn-sm btn-primary'><i class="fas fa-pen"></i></a>
-                                        <a href="" class='btn btn-sm btn-primary' data-toggle="modal" data-target="#deleteModal"><i class="fas fa-trash"></i></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
 
+                        <form class="formuser" name="formuser" id="formulario" method="POST" onsubmit="return validar()"> 
 
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <select id="status" class="form-control bg-light border-1 small" name="status">
+                                        <option selected="selected">Selecione o Status</option>
+                                        <option value="executada" >Executada</option>
+                                        <option value="nao-executada">Não executada</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="justificativa" name="justificativa" placeholder="Justificativa" cols="50" rows="4"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <input type="file" accept="application/pdf"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <div class="col-md-7 text-center" id="btn-salvar">
+                                        <button type="submit" class="btn btn-dark">
+                                            Salvar
+                                        </button>  
+                                    </div>        
+                                </div>
+                            </div>
+                        </form>
                     </div>
 
                 </div>
