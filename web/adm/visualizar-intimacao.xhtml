@@ -8,7 +8,7 @@
         <meta name="description" content=""/>
         <meta name="author" content=""/>
         
-        <title>SOSIFOD - Home</title>
+        <title>SOSIFOD - Visualizar Intimação</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
@@ -26,10 +26,10 @@
         <link href="../css/sb-admin-2.css" rel="stylesheet"/>
        
         <!-- -->
-        <link href="../css/styles.css" rel="stylesheet" type="text/css"/>    
+        <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
     </h:head>
     <h:body>
-        <div id="wrapper">
+               <div id="wrapper">
 
             <!-- Sidebar -->
             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -101,118 +101,91 @@
 
                     </nav>
                     <!-- End of Topbar -->
-                    
-                     <!-- Begin Page Content -->
+
+                    <!-- Begin Page Content -->
                     <div class="container-fluid">
 
-                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1 class="h3 mb-0 text-gray-800">Editar Intimação</h1>
-                        </div>
+                        <!-- Page Heading -->
+                        <main role="main" class="col-md-9 col-lg-8 px-5"> <br/>
+                            <div id="titulo">
+                                <h1>Intimação 78910</h1>
+                            </div>&nbsp;
+                            <div id="atendimentos">
+                                <table class="table">
 
-                        <form class="formuser" name="formuser" id="formulario" method="POST" onsubmit="return validar()"> 
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Titulo</th>
+                                            <td>Intimação para comparecimento em audiência</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">CPF do intimado</th>
+                                            <td>105.168.099-06</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">nome do intimado</th>
+                                            <td>Fernanda Carvalho da Silva</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Endereço do intimado</th>
+                                            <td>Rua Pedro Gusso, número 4.300, CEP 81315900, Cidade Industrial, Curitiba PR</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Data da intimação</th>
+                                            <td>31/05/2019 14:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Estado da intimação</th>
+                                            <td>Efetuada</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Oficial de Justiça</th>
+                                            <td>Guilherme Arantes</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Processo</th>
+                                            <td>123456, Inquérito Judicial Para Apuração de Falta Grave</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Intimação digitalizada</th>
+                                            <td>
+                                                <!-- <a href="../docs/tarefa1.pdf" download>-->
+                                                <a>
+                                                    <img src="../img/download.png" alt="processo" width="50" height="50"/>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                            <div class="form-row">
-                                <div class="form-group col-md-3">
-                                    <select id="status" class="form-control bg-light border-1 small" name="status">
-                                        <option selected="selected">Selecione o Status</option>
-                                        <option value="executada" >Executada</option>
-                                        <option value="nao-executada">Não executada</option>
-                                    </select>
+                            <a class="scroll-to-top rounded" href="#page-top">
+                                <i class="fas fa-angle-up"></i>
+                            </a>
+
+                            <!-- Logout Modal-->
+                            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                            <a class="btn btn-primary" href="../login.html">Logout</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <textarea class="form-control" id="justificativa" name="justificativa" placeholder="Justificativa" cols="50" rows="4"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-3">
-                                    <input type="file" accept="application/pdf"/>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <div class="col-md-7 text-center" id="btn-salvar">
-                                        <button type="submit" class="btn btn-dark">
-                                            Salvar
-                                        </button>  
-                                    </div>        
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <a class="scroll-to-top rounded" href="#page-top">
-                <i class="fas fa-angle-up"></i>
-            </a>
-
-            <!-- Logout Modal-->
-            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                            <a class="btn btn-primary" href="../login.html">Logout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- delete Modal-->
-            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Excluir intimação?</h5>
-                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">Selecione "Excluir" para excluir essa intimação</div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                            <a class="btn btn-primary" href="">Excluir</a>
-                        </div>
+                        </main>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Bootstrap core JavaScript-->
-        <script src="../vendor/jquery/jquery.min.js"></script>
-        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-        <!-- Core plugin JavaScript-->
-        <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-
-        <!-- Custom scripts for all pages-->
-        <script src="../js/sb-admin-2.min.js"></script>
-
-        <!-- Page level plugins -->
-        <script src="../vendor/chart.js/Chart.min.js"></script>
-
-        <!-- Page level custom scripts -->
-        <script src="../js/demo/chart-area-demo.js"></script>
-        <script src="../js/demo/chart-pie-demo.js"></script>
-        
-        <!-- icones -->
-        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-        
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     </h:body>
 </html>
 
